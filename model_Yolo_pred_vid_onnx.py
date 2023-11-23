@@ -1,19 +1,6 @@
 #install packages
 import os
-try:
-   pip_packages = os.popen("pip list").read()
-except Exception:
-        print("Error: pip is not installed")
-if pip_packages.find("ultralytics" and "opencv-python" and "opencv-contrib-python" and 
-                      "torch" and "torchvision" and "torchaudio" and "fiftyone" and "onnx" and 
-                      "onnxruntime" and "fiftyone-db-ubuntu2204" and "supervision") != -1:
-    print("Required libs are alerty installed")
-else:
-    os.system("pip3 install ultralytics"and  "pip3 install opencv-python" and "pip3 install opencv-contrib-python" 
-    and "pip3 install torch" and "pip3 install torchvision" and "pip3 install torchaudio" 
-    and "pip3 install fiftyone" and "pip3 install onnx" and "pip install onnxruntime" and "pip3 install fiftyone-db-ubuntu2204"
-    and "pip3 install supervision")
-    print("Required libs are installed")
+os.system("pip install -r requirements.txt")
 
 #Start of Inference code
 from ultralytics import YOLO

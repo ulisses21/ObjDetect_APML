@@ -1,18 +1,6 @@
 #install packages
 import os
-
-try:
-   pip_packages = os.popen("pip list").read()
-except Exception:
-        print("Error: pip is not installed")
-if pip_packages.find("ultralytics  " and " opencv-python "and "opencv-contrib-python" and 
-                      "torch" and "torchvision" and "torchaudio" and "fiftyone" and 
-                      "onnx" and "onnxruntime" and "fiftyone-db-ubuntu2204" and "supervision" ) != -1:
-    print("Required libs are alerty installed")
-else:
-    os.system('pip3 install ultralytics  opencv-python opencv-contrib-python  supervision torch torchvision torchaudio fiftyone onnx onnxruntime fiftyone-db-ubuntu2204')
-    print("Required libs are installed")
-
+os.system("pip install -r requirements.txt")
 
 from ultralytics import YOLO
 import cv2
