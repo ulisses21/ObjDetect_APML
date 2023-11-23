@@ -7,7 +7,8 @@ import numpy as np
 import onnxruntime
 #load model
 model = YOLO('person_w.pt')
-
+#results=model.predict('bus.jpg', save=True)#predict image 
+#model.predict('People Walking vid.mp4', save=True, imgsz=(1280,720))
 video='People Walking vid.mp4'
 cap = cv2.VideoCapture(video)
 
