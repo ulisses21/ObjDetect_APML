@@ -9,9 +9,9 @@ import supervision  as sv
 import numpy as np
 import onnxruntime
 #load model
-model = YOLO('person_detector.onnx')
+model = YOLO('person_detector_320.onnx')
 
-video='People Walking vid.mp4'
+video='People_Walking_vid.mp4'
 cap = cv2.VideoCapture(video)
 
 #For visualization of count in screen
@@ -22,7 +22,7 @@ Zone_area=np.array([
     [0,736]
 
 ])
-zone=sv.PolygonZone(Zone_area,frame_resolution_wh= (640,640)) 
+zone=sv.PolygonZone(Zone_area,frame_resolution_wh= (320,320)) 
 zone_annotation=sv.PolygonZoneAnnotator(zone=zone,color=sv.Color.red())
 
 while cap.isOpened():
@@ -31,7 +31,7 @@ while cap.isOpened():
 
     if success:
         # Run YOLOv8 inference on the frame
-        results = model.predict(frame, imgsz=(640),agnostic_nms=True,conf=0.4)
+        results = model.predict(frame, imgsz=(320),agnostic_nms=True,conf=0.4)
         #get the number of Detected People
         detections = sv.Detections.from_ultralytics(results[0])
         print(len(detections))

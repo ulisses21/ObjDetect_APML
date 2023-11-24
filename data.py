@@ -7,7 +7,7 @@ from ultralytics.utils import LOGGER, SETTINGS, Path, is_ubuntu, get_ubuntu_vers
 from ultralytics.utils.checks import check_requirements, check_version
 
 name = 'open-images-v7'
-fraction = 0.001  # fraction of full dataset to use
+fraction = 0.003  # fraction of full dataset to use
 
 for split in 'train', 'validation':  # 1743042 train, 41620 val images
      train = split == 'train'
