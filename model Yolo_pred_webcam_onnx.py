@@ -1,6 +1,4 @@
-#install packages
-import os
-os.system("pip install -r requirements.txt")
+
 
 from ultralytics import YOLO
 import cv2
