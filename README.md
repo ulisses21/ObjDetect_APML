@@ -8,4 +8,4 @@ Install modules
 
 pip install ultralytics onnx onnxruntime tflite-runtime
 
-Run the 
+Run the model Yolo_pred_webcam_onnx_160.py file  
