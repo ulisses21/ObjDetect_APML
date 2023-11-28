@@ -5,7 +5,7 @@ Run the file model "model Yolo_pred_vid" or "model Yolo_pred_webcam"
 
 this will use the "person_w.pt" model that was trained for 3 epochs with 1743 images 
 
-(this model is a "test run only" confidence in detecting humans is 0.23 when looking a the confusion matrix)
+(this model is a "test run only" confidence in detecting human agaisnt human is 0.23 when looking a the confusion matrix)
 
 to see the result open the folder runs/detect/predict
 
